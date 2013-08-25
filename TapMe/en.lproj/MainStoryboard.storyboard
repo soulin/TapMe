@@ -13,49 +13,65 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Time:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X60-mD-m5j">
+                                <color key="backgroundColor" red="0.74509803921568629" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="143" id="jW2-2g-wch"/>
-                                    <constraint firstAttribute="height" constant="45" id="o03-Dy-K9K"/>
+                                    <constraint firstAttribute="width" constant="133" id="nZt-od-Lj7"/>
+                                    <constraint firstAttribute="height" constant="46" id="sN5-bH-rTK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.74509803921568629" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Score 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCi-xw-q9E">
+                                <color key="backgroundColor" red="0.74509803921568629" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="131" id="WDZ-0k-19k"/>
-                                    <constraint firstAttribute="height" constant="44" id="myU-Vj-BZP"/>
+                                    <constraint firstAttribute="width" constant="146" id="S1y-Eu-4PW"/>
+                                    <constraint firstAttribute="height" constant="102" id="nwu-gT-c9n"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.74509803921568629" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfe-gw-TbR">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="85" id="4Av-Xt-RKn"/>
-                                    <constraint firstAttribute="height" constant="72" id="fjY-pb-9eb"/>
+                                    <constraint firstAttribute="height" constant="225" id="XNY-Hb-go7"/>
+                                    <constraint firstAttribute="width" constant="213" id="zFa-Wm-C0M"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="点我丫">
+                                <state key="normal" backgroundImage="button_tap_deselected.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="highlighted">
+                                <state key="highlighted" backgroundImage="button_tap_selected.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="bottonPressed" destination="2" eventType="touchUpInside" id="3A1-Ol-Ux4"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="checker_top.png" translatesAutoresizingMaskIntoConstraints="NO" id="l1j-on-Qvf">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="quh-13-ohV"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="checker_bottom.png" translatesAutoresizingMaskIntoConstraints="NO" id="nrk-KT-bsd">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="ed9-ea-Sif"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="nCi-xw-q9E" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="0lZ-6d-Fbe"/>
-                            <constraint firstItem="Rfe-gw-TbR" firstAttribute="top" secondItem="3" secondAttribute="top" constant="187" id="De6-5g-BcW"/>
-                            <constraint firstItem="X60-mD-m5j" firstAttribute="top" secondItem="3" secondAttribute="top" constant="78" id="H7q-Xo-JfV"/>
-                            <constraint firstAttribute="bottom" secondItem="nCi-xw-q9E" secondAttribute="bottom" constant="66" id="OTD-4a-kYT"/>
-                            <constraint firstItem="Rfe-gw-TbR" firstAttribute="centerX" secondItem="X60-mD-m5j" secondAttribute="centerX" type="default" id="aMH-oe-ind"/>
-                            <constraint firstItem="Rfe-gw-TbR" firstAttribute="centerX" secondItem="nCi-xw-q9E" secondAttribute="centerX" type="default" id="bIG-5C-hzo"/>
+                            <constraint firstItem="Rfe-gw-TbR" firstAttribute="top" secondItem="3" secondAttribute="top" constant="88" id="Baq-aV-Hfg"/>
+                            <constraint firstItem="nrk-KT-bsd" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="ErV-K7-C0c"/>
+                            <constraint firstItem="Rfe-gw-TbR" firstAttribute="centerX" secondItem="X60-mD-m5j" secondAttribute="centerX" type="default" id="Fxd-fv-b1P"/>
+                            <constraint firstItem="nrk-KT-bsd" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="In5-Qn-axu"/>
+                            <constraint firstItem="nCi-xw-q9E" firstAttribute="centerX" secondItem="nrk-KT-bsd" secondAttribute="centerX" type="default" id="QU0-yn-P2S"/>
+                            <constraint firstItem="l1j-on-Qvf" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="aJT-7i-kN6"/>
+                            <constraint firstItem="l1j-on-Qvf" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="beX-n1-pez"/>
+                            <constraint firstItem="nrk-KT-bsd" firstAttribute="top" secondItem="nCi-xw-q9E" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="mrj-RM-Pgb"/>
+                            <constraint firstItem="X60-mD-m5j" firstAttribute="top" secondItem="3" secondAttribute="top" constant="35" id="oPt-Mm-Ebb"/>
+                            <constraint firstItem="Rfe-gw-TbR" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="49" id="qqo-bf-f4U"/>
                         </constraints>
                     </view>
                     <connections>
@@ -67,6 +83,12 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="button_tap_deselected.png" width="250" height="265"/>
+        <image name="button_tap_selected.png" width="250" height="265"/>
+        <image name="checker_bottom.png" width="320" height="23"/>
+        <image name="checker_top.png" width="320" height="22"/>
+    </resources>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>

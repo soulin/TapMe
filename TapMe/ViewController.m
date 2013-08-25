@@ -19,6 +19,14 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self setupGame];
+    
+    scroeLabel.backgroundColor =[UIColor colorWithPatternImage:[UIImage imageNamed:@"field_score.png"]];
+    
+    timerLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"field_time.png"]];
+    
+    buttonBeep = [self setupAudioPlayerWithFile:@"ButtonTap" type:@"wav" loop:NO];
+    secondBeep = [self setupAudioPlayerWithFile:@"SecondBeep" type:@"wav" loop:NO];
+    backgroundMusic = [self setupAudioPlayerWithFile:@"HallOfTheMountainKing" type:@"mp3" loop:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,6 +43,29 @@
     scroeLabel.text = [NSString stringWithFormat:@"分数： \n%i", count];
     
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(subtractTime) userInfo:nil repeats:YES];
+    
+    [backgroundMusic setVolume:0.3];
+    [backgroundMusic play];
+    
+
+}
+
+- (AVAudioPlayer *) setupAudioPlayerWithFile:(NSString *)file type:(NSString *)type loop:(BOOL)loop{
+    NSString *path = [[NSBundle mainBundle] pathForResource:file ofType:type];
+    NSURL *url = [NSURL fileURLWithPath:path];
+    
+    NSError *error;
+    
+    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    if (loop) {
+        audioPlayer.numberOfLoops = -1;
+    }
+   
+    if (!audioPlayer) {
+        NSLog(@"%@",[error description]);
+    }
+    
+    return audioPlayer;
 }
 
 - (void) subtractTime {
@@ -52,6 +83,8 @@
             otherButtonTitles:nil ];
         [alert show];
     }
+    
+    [secondBeep play];
 }
 
 
@@ -59,6 +92,8 @@
     count++; 
     scroeLabel.text = [NSString stringWithFormat:@"分数:\n%i", count];
 //    NSLog(@"pressed!");
+    
+    [buttonBeep play];
 }
 
 - (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
